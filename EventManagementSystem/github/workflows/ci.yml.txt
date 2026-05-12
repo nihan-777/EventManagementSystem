@@ -1,10 +1,11 @@
-name: CI - Build and Test
+name: CI - Build
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -20,7 +21,7 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore packages
-        run: dotnet restore
+        run: dotnet restore EventManagementSystem/EventManagementSystem.csproj
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build EventManagementSystem/EventManagementSystem.csproj --configuration Release --no-restore
