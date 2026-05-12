@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using EventManagementSystem.Database;
 using EventManagementSystem.Forms;
 
+
 namespace EventManagementSystem
 {
     static class Program
